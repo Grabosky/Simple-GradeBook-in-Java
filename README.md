@@ -1,11 +1,14 @@
 GradeBook v1.0 by Adam Grabowski
 
 Author:    Adam Grabowski
+
 Date:      25th January 2009
+
 License:   Open Source
+
 Language:  JAVA
 
-GradeBook v1.0 is application written in Java for ICS4M1 (Computer and Information Science class), 25th January 2009
+GradeBook v1.0 is application written in Java for ICS4M1 (Computer and Information Science class).
 
 It was created for teachers in mind who want to manage their classes and students easi(er).
 
