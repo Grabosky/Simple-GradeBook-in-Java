@@ -1,4 +1,4 @@
-GradeBook v1.0 by Adam Grabowski
+GradeBook v1.0
 
 Author:    Adam Grabowski
 
