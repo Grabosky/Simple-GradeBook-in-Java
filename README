@@ -1,0 +1,43 @@
+GradeBook v1.0 by Adam Grabowski
+
+Author:    Adam Grabowski
+Date:      25 January 2009
+License:   Open Source
+
+GradeBook v1.0 is application written in Java. It is made for teachers, who want to manage their classes and students easily. 
+
+In version 1.0 you can:
+-	Add, delete or edit different courses.
+-	Add, delete or edit different students in the course.
+-	Add, delete or edit student assignments in the course.
+
+No GUI in this version. 
+
+
+Description:
+
+1. After start the program, you see list of courses you have. 
+
+-	To select some course, type in 1 and number of the course you want to select.
+-	To add new course, type in 2 and enter new course name.
+-	To delete some course, type in 3 and number of the course you want to delete.
+-	To edit some course, type in 4 and number of the course you want to edit. Now type in new course name. Students in this course will remain the same.
+-	To quit type in 5.
+
+
+2. After selection of course, you see list of students in this course. 
+
+-	To select student, type in 1 and number of student you want to edit.
+-	To add new student, type in 2 and enter new student name.
+-	To delete some student from the course, type in 3 and number of the student you want to delete.
+-	To edit some student, type in 4 and number of the student you want to edit. Now type in new student name. Student’s marks in will remain the same.
+-	To quit type in 5.
+
+3. After selection of student, you see list of student’s marks. 
+
+-	To add new assignment, type in 1 and enter new assignment name, total points and points student get.
+-	To delete assignment from the list, type in 2 and number of the assignment you want to delete.
+-	To edit assignment, type in 3 and number of the assignment you want to edit. Now type in new assignment name, new total points and points student get. 
+-	To quit type in 4.
+
+Author: Adam Grabowski
