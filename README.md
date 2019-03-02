@@ -1,4 +1,4 @@
-GradeBook v1.0
+Simple GradeBook v1.0
 
 Author:    Adam Grabowski
 
