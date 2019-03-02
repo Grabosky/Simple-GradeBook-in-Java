@@ -16,7 +16,7 @@ Version 1.0:
 In version 1.0 you can:
 -	Add, delete or edit different courses.
 -	Add, delete or edit different students in the course.
--	Add, delete or edit student assignments in the course.
+-	Add, delete or edit student assignments in the course (add marks etc.).
 
 No GUI in this version. 
 ===================================================================
