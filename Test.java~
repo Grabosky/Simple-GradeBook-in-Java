@@ -1,0 +1,215 @@
+import java.io.*;
+import java.util.ArrayList;
+
+class Test
+{
+  
+    static int choose, delCourse, editCourse, selectCourse, selectStudentOption, delStudent, editStudent, selectStudent, selectAssignmentOption, newAssignmentTotal, newAssignmentScore, delAssignment;
+    static String courseName, newCourse, editCourseName, newStudent, editStudentName, newAssignment;
+    static  Course course = new Course();
+
+
+public static void main(String[] args) throws IOException {
+  
+System.out.println("     List of Your Courses:\n");
+
+ //Reads file and assign each course to each object in array.
+ BufferedReader coursesFile = new BufferedReader(new FileReader ("ListOfCourses.dat"));  
+   while(true)
+   {
+     courseName = coursesFile.readLine();
+     if(courseName==null){break;}
+    IndividualCourse k = new IndividualCourse(courseName);
+    course.add(k);
+    }    
+    coursesFile.close(); //Close File
+
+
+    course.show(); //Prints out all courses
+  
+     
+     System.out.println("");
+     
+    System.out.println("SELECT OPTION:");   
+    
+    System.out.println("(1) select course");
+    System.out.println("(2) add new course");
+    System.out.println("(3) delete course");
+    System.out.println("(4) edit course name");
+    System.out.println("(5) Quit\n");
+    
+    //Check input if appriopriate 
+      do
+    {
+    choose = Input.readInt();
+     if(choose>5||choose<1)
+    {
+      Output.println("Your choose is not appropriate. Enter again.");
+    }
+    }while(choose>5||choose<1);
+      
+    
+//Options menu
+/*Select course*/ if(choose==1) {
+  
+                                 Output.println("Enter number of course that you want to select:");
+                                 selectCourse = Input.readInt();
+                                 IndividualCourse work;
+                                 work = course.getCourseObject(selectCourse);
+                                 Output.println("");
+                                 Output.println("COURSE MENU (" + work.getCourseName() + "):");
+                                 Output.println("List of students:");
+                                 Output.println("");
+                                 work.showStudents();
+                                 
+                                      System.out.println("");
+                                      System.out.println("");
+     
+                                 System.out.println("Select option:");   
+    
+                                 System.out.println("(1) select student");
+                                 System.out.println("(2) add student");
+                                 System.out.println("(3) delete student");
+                                 System.out.println("(4) edit student name");
+                                 System.out.println("(5) Quit\n");
+                                 selectStudentOption = Input.readInt();
+                                 
+                                                           /*Select Student*/   if(selectStudentOption==1){
+                                   
+                                    
+                                                             System.out.println("Enter student number you want to select:");   
+                                                             selectStudent = Input.readInt();
+                                   
+                                                             Student stud;
+                                                             stud = work.getStudentObject(selectStudent);
+                                                               
+                                                             Output.println("");
+                                                             Output.println("STUDENT MENU [" + stud.getStudentName() + "]:");
+                                                             Output.println("List of assignments:");
+                                                             Output.println("");
+                                                             
+                                                             Output.println("Assignment name:" + "\t" + "Points/Total" + "\t" + "Percentage");
+                                                             stud.showAssignments();
+                                   
+                                                               System.out.println("");
+                                                             Output.println("Overall average: " + stud.showOverall() + "%");
+                                                                
+                                                               System.out.println("");
+                                                               System.out.println("");
+     
+                                                               System.out.println("Select option:");   
+    
+                                                               System.out.println("(1) add new mark");
+                                                               System.out.println("(2) delete mark");
+                                                               System.out.println("(3) edit assignment");
+                                                               System.out.println("(4) Quit\n");
+                                                               selectAssignmentOption = Input.readInt();
+                                                               
+                                              /*Add new mark*/ if(selectAssignmentOption==1)
+                                                               {
+                                                                Output.println("Enter new assignment name:");
+                                                                newAssignment = Input.readString();
+                                                                newAssignment = newAssignment.trim(); 
+                                                                Output.println("Enter new assignment total score:");
+                                                                newAssignmentTotal = Input.readInt();      
+                                                                Output.println("Enter new assignment student score:");
+                                                                newAssignmentScore = Input.readInt();
+                                                               
+                                                                Mark k = new Mark(newAssignment, newAssignmentTotal, newAssignmentScore);
+                                                                stud.createAssignment(k);
+                                                                stud.showAssignments();
+                                                                Output.println("Overall average: " + stud.showOverall() + "%");
+                                                                
+                                                               }
+                                               /*Delete mark*/ else if (selectAssignmentOption==2)
+                                                               {
+                                                  
+                                                                Output.println("Enter assignment number you want to delete:");
+                                                                delAssignment = Input.readInt();
+                                   
+                                                                stud.deleteAssignment(delAssignment);
+                                                                stud.showAssignments();
+                                                                Output.println("Overall average: " + stud.showOverall() + "%");
+                                                               }
+                                           /*Edit Assignment*/ else if (selectAssignmentOption==3)
+                                                               {
+                                                               }
+                                                     /*Quit*/  else if (selectAssignmentOption==4)
+                                                               {
+                                                                  System.exit(0);
+                                                               }
+                                                             
+                                   
+                                   
+               /*Add Student*/    } else if (selectStudentOption==2) {
+                                   
+                                   Output.println("Enter new student name:");
+                                   newStudent = Input.readString();
+                                   newStudent = newStudent.trim(); 
+                                                                      
+                                    Student k = new Student(newStudent);
+                                    work.createStudent(k);
+                                    work.showStudents();
+                                    
+           /*Delete Student*/      } else if (selectStudentOption==3) {
+                                    
+                                   Output.println("Enter student number you want to delete:");
+                                   delStudent = Input.readInt();
+                                   
+                                   work.deleteStudent(delStudent);
+                                   work.showStudents();
+                                    
+       /*Edit Student Name*/     } else if (selectStudentOption==4) {
+                                   
+                                    Output.println("Enter number of student that you want to change his name:");
+                                    editStudent = Input.readInt(); 
+                                    Output.println("Enter new name of the student:");
+                                    editStudentName = Input.readString();
+                                    editStudentName = editStudentName.trim();                                     
+                                    work.editStudentName(editStudent, editStudentName);
+         
+                                    
+        /*Quit*/                 } else if (selectStudentOption==5) {
+                                    System.exit(0);
+                                 }
+                                 
+                                 
+                                 
+     
+  
+    
+/*Add new course*/ } else if(choose==2) {
+  
+  Output.println("Enter new course name");
+  newCourse = Input.readString();
+  newCourse = newCourse.trim();
+  newCourse = newCourse.toUpperCase();
+  IndividualCourse k = new IndividualCourse(newCourse);
+  course.createCourse(k);
+   
+/*Delete course*/ } else if(choose==3) {
+  
+   Output.println("Enter number of course that you want to delete:");
+  delCourse = Input.readInt();
+  course.deleteCourse(delCourse);
+  
+   
+/*Edit course*/ } else if(choose==4) {
+
+    Output.println("Enter number of course that you want to edit:");
+  editCourse = Input.readInt(); 
+  Output.println("Enter new name of the course:");
+  editCourseName = Input.readString();
+  editCourseName = editCourseName.trim();
+  editCourseName = editCourseName.toUpperCase();
+  
+  course.editCourse(editCourse, editCourseName);
+  
+/*Exit*/ } else if(choose==5){
+   System.exit(0);
+}
+
+
+
+} //end main
+} //end class

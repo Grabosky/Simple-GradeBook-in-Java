@@ -1,0 +1,73 @@
+class Mark
+{ 
+    private String name;
+    private int    totalPoints;
+    private int    points;
+    private double percentage =0;
+
+
+    public Mark ( String theName )
+    {
+        this.name           = theName;
+    }
+    
+    
+    public Mark ( String theName, int topo, int po )
+    {
+        this.name           = theName;
+        this.totalPoints = topo;
+        this.points    = po;
+        this.percentage =  Math.round((((double)points/(double)totalPoints)*100)*Math.pow(10, 2))/Math.pow(10, 2); //Rounding percentage to two decimal places
+       
+    }
+    
+    
+
+
+      public void setDeflaut()
+    {
+       this.totalPoints = 0;
+       this.points    = 0;
+       this.percentage = 0;
+    }
+    
+      
+  
+    
+    public String getAssignmentName()
+    {
+        return this.name;
+    }
+
+
+
+    public double getPercentage()
+    {
+        
+        return this.percentage;
+    }
+
+    
+      public int getAssignmentTotal()
+    {      
+        return  totalPoints;
+    }
+      
+      
+        public int getAssignmentScore()
+    {      
+        return  points;
+    }
+      
+      
+            public String getAssignment()
+    {
+        String show = " " + name + "\t" + this.points + "/" + this.totalPoints + "\t\t" + this.percentage + "%";
+        return show;
+    }
+
+
+
+
+
+}
