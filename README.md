@@ -1,4 +1,4 @@
-Simple GradeBook v1.0
+Simple GradeBook v1.0 written in Java
 
 Author:    Adam Grabowski
 
@@ -6,13 +6,21 @@ Date:      25th January 2009
 
 License:   Open Source
 
-Language:  JAVA
+Language:  Java
+
 
 GradeBook v1.0 is application written in Java for ICS4M1 (Computer and Information Science class).
 
 It was created for teachers in mind who want to manage their classes and students (and their marks) easier.
 
-Start: Test.java
+Works on the basis of folders and txt files as databases. 
+
+
+To start: 
+Compile the project and run Test.java
+
+Works nicely in drJava
+
 
 Version 1.0:
 ===================================================================
