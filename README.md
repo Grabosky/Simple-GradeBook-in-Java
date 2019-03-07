@@ -13,7 +13,7 @@ GradeBook v1.0 is application written in Java for ICS4M1 (Computer and Informati
 
 It was created for teachers in mind who want to manage their classes and students (and their marks) easier.
 
-Works on the basis of folders and txt files as database. 
+Works on the basis of folders and txt files as a database. 
 
 
 To start: 
