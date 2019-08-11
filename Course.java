@@ -125,8 +125,7 @@ class Course
   } //ENDOF  EDIT COURSE
   
   
-  
-  
+ 
   
   
 //GETS SELECTED OBJECT FROM THE LIST
