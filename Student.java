@@ -135,14 +135,11 @@ class Student
   
   
   
-  
 //GET ASSIGNMENT LIST SIZE
   public int getSize(){
     return assignments.size();
   }   
-  
-  
-  
+ 
   
   
 }//END CLASS Student
