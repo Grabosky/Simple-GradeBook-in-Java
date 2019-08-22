@@ -61,5 +61,3 @@ class Mark
     return show;
   }
 }//end class Mark
-
-
