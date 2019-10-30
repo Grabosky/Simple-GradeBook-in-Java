@@ -8,6 +8,7 @@ License:   Open Source
 
 Language:  Java
 
+Description: 
 
 GradeBook v1.0 is application written in Java for ICS4M1 (Computer and Information Science class).
 
