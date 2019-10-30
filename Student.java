@@ -1,7 +1,7 @@
 /* Student.java
  * GradeBook v.1.0 by Adam Grabowski
  * 25 January 2009
- * Purpose: Contain student name and his assignments (Mark class objects)
+ * Purpose: Contains student name and his assignments (Mark class objects)
  * Requires: Mark.java
  */
 
