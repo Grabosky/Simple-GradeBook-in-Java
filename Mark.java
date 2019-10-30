@@ -1,7 +1,7 @@
 /* Mark.java
  * GradeBook v.1.0 by Adam Grabowski
  * 25 January 2009
- * Purpose: Contain name, total score and student score of assignment.
+ * Purpose: Contains name, total score and student score of assignment.
  * Requires: none
  */
 
