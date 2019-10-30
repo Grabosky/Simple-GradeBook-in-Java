@@ -1,5 +1,5 @@
 Simple GradeBook v1.0 written in Java
-
+===================================================================
 Author:    Adam Grabowski
 
 Date:      25th January 2009
