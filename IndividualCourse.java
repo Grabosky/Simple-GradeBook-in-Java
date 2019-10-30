@@ -1,7 +1,7 @@
 /* IndividualCourse.java
  * GradeBook v.1.0 by Adam Grabowski
  * 25 January 2009
- * Purpose: Contain list of students (Student class objects)
+ * Purpose: Contains list of students (Student class objects)
  * Requires: Student.java
  */
 
