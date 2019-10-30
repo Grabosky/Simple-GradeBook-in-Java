@@ -29,5 +29,7 @@ In version 1.0 you can:
 -	Add, delete or edit different students in the course.
 -	Add, delete or edit student assignments in the course (add marks etc.).
 
-No GUI in this version. 
+To Do:
 ===================================================================
+- Update the main loop to come back to respectable point after canceling the operation
+- Add GUI Version
